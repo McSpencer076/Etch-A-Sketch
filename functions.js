@@ -1,3 +1,5 @@
+/* General DOM */
+
 const sketchGrid = document.querySelector('#sketchGrid');
 const gridButton = document.querySelector("#changeGrid");
 const slider = document.querySelector('#slider');
@@ -10,6 +12,13 @@ let screenVal = document.querySelector("p#gridValue");
 let val = document.getElementById('slider').value;
 screenVal.textContent = "Gridsize: " + val;
 console.log(screenVal.textContent);
+
+slider.addEventListener("input", createGrid)
+gridButton.addEventListener("click", setBlackColor);
+randomColorBtn.addEventListener("click", setRandomColor);
+colorPicker.addEventListener("change", chooseColor);
+
+/* Grid functions */
 
 function createGrid() {
     resetGrid();
@@ -45,20 +54,22 @@ function setRandomColor() {
     })
 }
 
-function gridColorPicker() {
+function resetGrid() {
+    const resetGrid = document.querySelectorAll(".divGrid")
+    resetGrid.forEach(divGrid => {
+        divGrid.remove();
+    });
+}
+
+/* supporting functions */
+
+function chooseColor() {
     const divGrid = document.querySelectorAll("div.divGrid");
     divGrid.forEach(divGrid => {
         divGrid.addEventListener("mouseover", function (divGrid) {
             divGrid.target.style.backgroundColor = hexToRGB();
         })
     })
-}
-
-function resetGrid() {
-    const resetGrid = document.querySelectorAll(".divGrid")
-    resetGrid.forEach(divGrid => {
-        divGrid.remove();
-    });
 }
 
 function randomColorValue() {
@@ -81,9 +92,6 @@ function hexToRGB() {
     return colorRGB;
 }
 
-slider.addEventListener("input", createGrid)
-gridButton.addEventListener("click", setBlackColor);
-randomColorBtn.addEventListener("click", setRandomColor);
-colorPicker.addEventListener("change", gridColorPicker);
+/* function execution page start-up */
 
 createGrid();

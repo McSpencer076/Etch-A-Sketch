@@ -4,6 +4,8 @@
     src: url(/Users/merijn/TheOdinProject/repos/Etch-A-Sketch/FONTS/nikeflix/);
 }
 
+/*selectors*/
+
 body {
     font-family: nikeflix;
     display: flex;
@@ -13,6 +15,59 @@ body {
     gap: 10px 10px;
     background-color: #2B4040;
 }
+
+/* texts */
+h1 {
+    font-size: 60;
+    text-shadow: 2px 2px #97A69B;
+}
+
+a {
+    font-family: nikeflix;
+    font-size: 16;
+    color: black;
+    text-decoration: none;
+}
+
+p.value#gridValue {
+    font-family: nikeflix;
+    font-size: 30;
+    text-align: center;
+    margin: 5px;
+}
+
+/* classes */
+
+.button {
+    font-family: nikeflix;
+    font-size: 25;
+    text-align: center;
+    background-color: #465956;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 5px;
+    margin-left: 7px;
+    width: 45%;
+    height: 45%;
+    transition: transform .2s;
+}
+
+.button#randomColorBtn {
+    margin-left: 3px;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 4px solid #97A69B;
+}
+
+.buttonContainer {
+    width: 265px;
+    height: 120px;
+    vertical-align: middle;
+}
+
+
 
 .container#sliderButtons {
     width: 560px;
@@ -29,6 +84,25 @@ body {
     margin-bottom: -2px;
 }
 
+.divGrid {
+    border: 0.5px solid black;
+}
+
+div.header {
+    height: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -60px;
+    height: 100px;
+}
+
+.sliderContainer {
+    width: 265px;
+    height: 120px;
+    vertical-align: middle;
+    text-align: top;
+}
+
 .sketchGrid {
     border: 4px solid black;
     border-radius: 10px;
@@ -40,47 +114,7 @@ body {
     display: grid;
 }
 
-.divGrid {
-    border: 0.5px solid black;
-}
-
-.button {
-    font-family: nikeflix;
-    font-size: 25;
-    text-align: center;
-    background-color: #465956;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin: 5px;
-    margin-left: 7px;
-    width: 45%;
-    height: 45%;
-    transition: transform .2s;
-}
-
-.button#randomColorBtn{
-    margin-left: 3px;
-}
-
-#txtGridValue {
-    background-color: #465956;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin: 5px;
-    width: 95%;
-    height: 41%;
-}
-
-.button:hover {    
-    transform: scale(1.05);
-    box-shadow: 3px solid #97A69B;
-}
-
-.buttonContainer {
-    width: 265px;
-    height: 120px;
-    vertical-align: middle;
-}
+/* ids */
 
 #colorPicker {
     border: 2px solid #060C0D;
@@ -94,14 +128,7 @@ body {
 
 #colorpicker:hover {
     transform: scale(1.05);
-    box-shadow: 3px solid #97A69B;
-}
-
-.sliderContainer {
-    width: 265px;
-    height: 120px;
-    vertical-align: middle;
-    text-align: top;
+    box-shadow: 4px solid #97A69B;
 }
 
 #slider {
@@ -122,34 +149,20 @@ body {
     height: 80%;
     background: #2B4040;
     cursor: pointer;
-  }
-  
+}
+
 #slider::-moz-range-thumb {
     width: 5px;
     height: 80%;
     background: #2B4040;
-    cursor: pointer;}
-
-#slider:hover {
-    box-shadow: 3px solid  #97A69B;
+    cursor: pointer;
 }
 
-p.value#gridValue {
-    font-family: nikeflix;
-    font-size: 30;
-    text-align: center;
+#txtGridValue {
+    background-color: #465956;
+    border-radius: 10px;
+    border: 2px solid black;
     margin: 5px;
-}
-
-div.header {
-    height: 100px;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: -60px;
-    height: 100px;
-}
-
-h1 {
-    font-size: 60;
-    text-shadow: 2px 2px #97A69B;
+    width: 95%;
+    height: 41%;
 }
