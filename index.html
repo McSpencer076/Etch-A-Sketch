@@ -8,12 +8,14 @@
 <body>
     <script src="functions.js" defer></script>
     <div class="header">
-        <h1>Etch-A-Sketch!</h1>
+        <h1>Etch-A-Sketch</h1>
     </div>
     <div class="container" id="sliderButtons">
         <div class="sliderContainer">
-            <p class="value" id="gridValue"></p>
-            <input type="range" min="2" max="100" value="16" id="slider">
+            <div id="txtGridValue">
+                <p class="value" id="gridValue"></p>
+            </div>
+            <div><input type="range" min="2" max="100" value="16" id="slider"></div>
         </div>
         <div class="buttonContainer">
             <button id="changeGrid" class="button">Black</button>
@@ -24,6 +26,9 @@
         </div>
     </div>
     <div id="sketchGrid">
+    </div>
+    <div class="footer">
+        <p id="footerText">A "The Odin Project" Project.<a href="https://github.com/McSpencer076" target="_blank"> ©McSpencer076 </a></p>
     </div>
 
 </body>
