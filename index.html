@@ -1,21 +1,31 @@
 <html>
+
 <head>
-<link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <title> Etch-A-Sketch </title>
 </head>
+
 <body>
     <script src="functions.js" defer></script>
-            <div id="container"></div>
-            <div id="buttonSliderDiv" class="buttonSliderDiv">
-                <div class="sliderContainer">
-                    <input type="range" min="2" max="100" value="16" id="slider">
-                    <p class="value">16</p>
-                </div>
-                <div class="buttonContainer">
-                    <button id="changeGrid" class="gridButton">BLACK!</button>
-                    <button id="randomColorBtn" class="randomColorBtn">Random Color</button>
-                </div>
+    <div class="header">
+        <h1>Etch-A-Sketch!</h1>
+    </div>
+    <div class="container" id="sliderButtons">
+        <div class="sliderContainer">
+            <p class="value" id="gridValue"></p>
+            <input type="range" min="2" max="100" value="16" id="slider">
+        </div>
+        <div class="buttonContainer">
+            <button id="changeGrid" class="button">Black</button>
+            <button id="randomColorBtn" class="button">Random Color</button>
+            <div>
+                <input type="color" id="colorPicker">
             </div>
+        </div>
+    </div>
+    <div id="sketchGrid">
+    </div>
+
 </body>
 
 </html>
